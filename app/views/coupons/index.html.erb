@@ -1,0 +1,13 @@
+<h1>Coupons Index</h1>
+<%= link_to "Add New Coupon", new_coupon_path %>
+
+<!-- <h2>To pass rspec</h2>
+<% @coupons.each do |coupon| %>
+<%= coupon.store %>
+<% end %> -->
+
+<ul>
+<% @coupons.each do |coupon| %>
+  <li><%= link_to coupon.coupon_code, coupon_path(coupon) %> for <%= coupon.store %></li><br>
+<% end %>
+</ul>
